@@ -1,0 +1,26 @@
+  def sum_even_numbers(matrix):
+    # Inicializamos la suma
+    total_sum = 0
+    
+    # Obtenemos el tamaño de la matriz (asumiendo que es cuadrada)
+    N = len(matrix)
+    
+    # Recorremos cada fila (i) y columna (j) de la matriz
+    for i in range(N):
+        for j in range(N):
+            # Si el número es par, lo sumamos al total
+            if matrix[i][j] % 2 == 0:
+                total_sum += matrix[i][j]
+    
+    # Devolvemos la suma total de los números pares
+    return total_sum
+
+# Ejemplo
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+result = sum_even_numbers(matrix)
+print("Suma de los números pares:", result)
